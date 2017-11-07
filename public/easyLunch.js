@@ -27,7 +27,14 @@ var getFormInfo = function() {
         driving: driving,
         spots: spots
     });
+
+    
 };
+
+var sorting = firebase.database().ref('people/').orderByChild('spots');
+
+
+
 
 var getDrivers = function(){
     var info;
@@ -37,3 +44,28 @@ var getDrivers = function(){
         
       });
 };
+
+var getDrivers2 = function() {
+    var info;
+    var refe = firebase.database().ref('/people/');
+    refe.orderByChild("Spots").on("value", function(snapshot) {
+        var info = JSON.stringify(snapshot.val());
+        document.getElementById('yay').innerHTML = info;
+
+        
+    });
+};
+
+var rootRef = firebase.database().ref().child("people").orderByChild("spots");
+window.onload = function() {
+rootRef.on("child_added", function(snapshot){
+    console.log(snapshot.val());
+
+    var firstname = snapshot.child("firstname").val();
+    var lastname = snapshot.child("lastname").val();
+    var spots = snapshot.child("spots").val();
+
+    $("#table_body").append("<tr><td>" + firstname + "</td> <td>" + lastname + "</td> <td>" + spots + "</td></tr>");
+
+});
+}
