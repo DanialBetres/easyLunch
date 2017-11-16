@@ -30,89 +30,76 @@ var getFormInfo = function() {
         spots: spots
     });
 
+    alert("Cool, you signed up for lunch! Go to 'Driver List' for Driver List");
+
     
 };
 
 var sorting = firebase.database().ref('people/').orderByChild('spots');
 
-
-
-
-// var getDrivers = function(){
-//     var info;
-//     firebase.database().ref('/people/').once('value').then(function(snapshot) {
-//         var info = JSON.stringify(snapshot.val());
-//         document.getElementById('yay').innerHTML = info;
-        
-//       });
-// };
-
-// var getDrivers2 = function() {
-//     var info;
-//     var refe = firebase.database().ref('/people/');
-//     refe.orderByChild("Spots").on("value", function(snapshot) {
-//         var info = JSON.stringify(snapshot.val());
-//         document.getElementById('yay').innerHTML = info;
-
-        
-//     });
-// };
-
 var rootRef = firebase.database().ref().child("people").orderByChild("spots");
 // console.log(JSON.stringify(rootRef));
 window.onload = function() {
 
-rootRef.on("child_added", function(snapshot){
+    rootRef.on("child_added", function(snapshot){
+        console.log(snapshot.val());
 
-    var firstname = snapshot.child("firstname").val();
-    var lastname = snapshot.child("lastname").val();
-    var spots = snapshot.child("spots").val();
-   // console.log(JSON.stringify(snapshot.val()));
+        var firstname = snapshot.child("firstname").val();
+        var lastname = snapshot.child("lastname").val();
+        var spots = snapshot.child("spots").val();
+    // console.log(JSON.stringify(snapshot.val()));
 
-   
-    $("#table_body").append("<tr><td>" + firstname + "</td> <td>" + lastname + "</td> <td>" + spots + "</td></tr>");
+    
+        $("#table_body").append("<tr><td>" + firstname + "</td> <td>" + lastname + "</td> <td>" + spots + "</td></tr>");
 
-});
+    });
 
+    rootRef.once('value').then(function(snapshot) {
+        console.log(snapshot.val());
+        arr = Object.values(snapshot.val());
+        arr.sort(function(a,b) {
+            return b.spots - a.spots;
+        });
+        console.log(arr);
+        getDriverList();
+    });
 
-
-
-rootRef.once('value').then(function(snapshot) {
-   arr = Object.values(snapshot.val());
-  arr.sort(function(a,b) {
-    return b.spots - a.spots;
-   });
-   console.log(arr);
-   getDriverList();
-   
-});
-
-var getDriverList = function () {
-    var x = arr.length - 1;
-    for(var i = 0; i <arr.length; i ++){
-        element.driverName = arr[i].firstname + " " + arr[i].lastname;
-        for(var j = 0; j < arr[i].spots; j ++){
-            if(x > i){
-                element.passengers.push(arr[x].firstname + " " + arr[x].lastname)
-                x --;
-                
-            }else {
-                break;
+    var getDriverList = function () {
+        var x = arr.length - 1;
+        for(var i = 0; i <arr.length; i ++){
+            element.driverName = arr[i].firstname + " " + arr[i].lastname;
+            for(var j = 0; j < arr[i].spots; j ++){
+                if(x > i){
+                    element.passengers.push(arr[x].firstname + " " + arr[x].lastname)
+                    x --;
+                    
+                }else {
+                    break;
+                }
             }
+            driverList.push(element);
+            element = {'driverName' : "", 'passengers': []};
+            
+            if(x === i){
+                break;
+            } 
+            
         }
-        driverList.push(element);
-         element = {'driverName' : "", 'passengers': []};
-        
-        if(x === i){
-            break;
-        } 
-        
+        localStorage.setItem("driverList", JSON.stringify(driverList));
+        console.log(driverList);
+
+        for(var driver in driverList) {
+            var passengerString = " ";
+            for(var passenger in driverList[driver].passengers){
+                if(passenger < driverList[driver].passengers.length -1) {
+                    passengerString += driverList[driver].passengers[passenger] + ", ";
+                } else{
+                    passengerString += driverList[driver].passengers[passenger];
+                }
+
+            }
+            console.log(passengerString);
+            $("#carInfo").append("<tr id='" +driverList[driver].driverName+"'> <td>" + driverList[driver].driverName+ " </td>"  + "<td>" + passengerString+ " </td>" +  "</tr>");
+        }
     }
-    console.log(driverList);
-    console.log(element);
-}
-
-
-   
-
 }

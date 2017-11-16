@@ -1,3 +1,34 @@
+@font-face {
+    font-family: lato;
+    src: url(lato/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    font-weight: bold;
+    src: url(lato/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: lato-medium;
+    src: url(lato/Lato-Medium.ttf);
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+h1 {
+    font-family: lato-medium;
+    font-size: 60px;
+}
+
+input {
+    background: transparent !important;
+    border-color: black !important;
+}
+
 #body1 {
     display:flex;
     position:absolute;
@@ -6,23 +37,47 @@
     flex-direction: column;
     width:100%;
     height:100%;
+    font-family: lato;
 
 }
 
+.navbar-brand {
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.navbar ul {
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.navbar li {
+    padding-left: 5px;
+}
+
+.navbar li:hover {
+    font-size: 22px;
+    border-bottom: solid 2px;
+}
+
+body {
+    font-family: lato;
+}
+
+.container {
+    padding-top: 40px;
+}
+
 #header {
-     display:flex;
-     position:relative;
-     justify-content: flex-start;
-     align-items: flex-start;
-     flex-basis: 500px;
-     width:90%;
+     padding-top: 50px;
+     padding-left: 50px;
 }
 
 #intro-text {
     text-align: center;
     font-size:40px;
     color:blue;
-    font-weight: bold;
 }
 
 #title {
@@ -42,11 +97,67 @@
     position:relative;
 }
 
-.col-7 {
-    padding-left:0px;
+.aysha-button {
+    color: black;
+    border-radius: 3rem;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
 }
 
-.col-3 {
-    padding-left:0px;
+.aysha-button:hover {
+    cursor: pointer;
 }
 
+.get-lunch {
+    background-color: blue;
+    margin-right: 30px;
+}
+
+.get-lunch:hover {
+    background-color: #0000F0;
+}
+
+.see-list {
+    background-color: #C0C0C0;
+}
+
+.see-list:hover {
+    background-color: lightgray;
+}
+
+.btn .btn-info .btn-lg {
+    border-radius: 3rem;
+}
+
+.fa-5 {
+    font-size: 150px !important;
+    padding: 20px;
+}
+
+.homeContainer {
+    height: 80vh;
+}
+
+.group-photo {
+    width: 90%; 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)
+}
+
+@media (max-width: 600px){
+    .fa-5 {
+        font-size: 70px !important;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    .group-photo {
+        box-shadow: none;
+    }
+
+    .homeContainer {
+        height: auto;
+    }
+}

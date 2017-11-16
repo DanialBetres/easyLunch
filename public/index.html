@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="easyLunch.css">
+  <meta name="viewport" content="width=device-width" />
   <title> Easy Lunch</title>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
@@ -16,110 +17,45 @@
   crossorigin="anonymous"></script>
 </head>
 
-<body background="banana.jpg" id="body1">
-  <header id="header">
-    <h1 id="title"> Easy Lunch</h1>
+<body >
 
-  </header>
-  <p id="intro-text"> welcome to Easy Lunch, an app created to help make your friday lunch a breeze</p>
-  <div id="but">
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-    <button id= "buttons" class="btn btn-lg" data-toggle="modal" data-target="#myOtherModal" onclick=""> View current lists</button>
+  <div style="position: fixed; width: 100%; opacity: 0.6; z-index: -1 "><img src="banana.jpg"/></div> 
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/index.html">EasyLunch</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/signUp.html">Sign Up For Lunch</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/seeList.html">Driver List</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/contact.html">Contact Us</a>
+      </li>
+    </ul>
   </div>
+</nav>
 
-  <div class="container">
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title">Sign Up</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="Name">First Name</label>
-              <div class="col-7">
-                <input class="form-control input-sm" id="firstname" type="text">
-              </div>
-            </div>
-            <div class="form-group">
-                <label for="Name">Last Name</label>
-                <div class="col-7">
-                  <input class="form-control input-sm" id="lastname" type="text">
-                </div>
-              </div>
-            <div class="form-group">
-              <label for="inputsm">Are you a driver?</label>
-              <span></span>
-              <div>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio" id="isDriver">Yes</label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio" id="isntDriver">No</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="carSpace">How many friends can you take? (Dont include yourself!) (If you're not a driver put 0)</label>
-              <div class="col-3">
-                <input class="form-control" id="carSpace" type="text">
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="getFormInfo()">Submit</button>
-          </div>
-        </div>
-
+  <div class="container homeContainer" style="padding-top: 40px">
+    <div class="row align-items-center" style="height: 100%">
+      <div class="col-sm-6" align="center">
+          <p id="intro-text"> Welcome to <b>EasyLunch</b>, an app created to help make your Friday lunch a breeze</p>
+          <button type="button" class="btn btn-lg aysha-button get-lunch" data-toggle="modal" data-target="#myModal"><a href="signUp.html">Sign Up For Lunch</a></button>
+          <button class="btn btn-lg aysha-button see-list" data-toggle="modal" data-target="#myOtherModal" onclick="">Who Am I Going With?</button>
+      </div>
+      <div class="col-sm-6">
+        <img src="lunch.jpg" class="group-photo"/>
       </div>
     </div>
-
-     <!-- Modal -->
-     <div class="modal fade" id="myOtherModal" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">          
-              <h3 class="modal-title">Current Signups</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body" >
-            <div class="container">
-              <p>Here is a list of everyone who will be coming!</p>            
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Spots Available</th>
-                  </tr>
-                </thead>
-                <tbody id = "table_body">
-              
-                </tbody>
-              </table>
-            </div>
-
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cool</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
 
   
