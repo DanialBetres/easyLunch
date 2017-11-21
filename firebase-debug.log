@@ -34,3 +34,81 @@
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2017-11-18T20:29:33.003Z] ----------------------------------------------------------------------
+[debug] [2017-11-18T20:29:33.006Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dania\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-11-18T20:29:33.006Z] CLI Version:   3.15.2
+[debug] [2017-11-18T20:29:33.007Z] Platform:      win32
+[debug] [2017-11-18T20:29:33.007Z] Node Version:  v6.10.3
+[debug] [2017-11-18T20:29:33.007Z] Time:          Sat Nov 18 2017 15:29:33 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:33.007Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-18T20:29:33.023Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-18T20:29:33.023Z] > authorizing via signed-in user
+[debug] [2017-11-18T20:29:33.026Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-18T20:29:33.026Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/OA3si9K157vLdq4R0KFab_D0eNtxfddgXuXu6HrhEtSnsX2fkSbz_gmQon6zj9fE',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Nov 18 2017 15:29:33 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:33.198Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:29:33.211Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:29:33 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:33.795Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:29:33.797Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/easy-lunch-523f4/tokens  
+ Sat Nov 18 2017 15:29:33 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:34.299Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\dania\Desktop\Lunch'...
+[info] 
+[debug] [2017-11-18T20:29:34.311Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:29:34 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:34.708Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:29:34.710Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/286970043586/clients/_:getWebAppConfig  
+ Sat Nov 18 2017 15:29:34 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:35.015Z] <<< HTTP RESPONSE 200
+[warn] !  hosting: Port 5000 is not available. Trying another port...
+[debug] [2017-11-18T20:29:35.047Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:29:35 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:35.266Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:29:35.267Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/286970043586/clients/_:getWebAppConfig  
+ Sat Nov 18 2017 15:29:35 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:29:35.435Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5004
+
+[debug] [2017-11-18T20:31:22.951Z] ----------------------------------------------------------------------
+[debug] [2017-11-18T20:31:22.954Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dania\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-11-18T20:31:22.954Z] CLI Version:   3.15.2
+[debug] [2017-11-18T20:31:22.954Z] Platform:      win32
+[debug] [2017-11-18T20:31:22.954Z] Node Version:  v6.10.3
+[debug] [2017-11-18T20:31:22.955Z] Time:          Sat Nov 18 2017 15:31:22 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:22.955Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-18T20:31:22.966Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-18T20:31:22.967Z] > authorizing via signed-in user
+[debug] [2017-11-18T20:31:22.970Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:31:22 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:23.478Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:31:23.480Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/easy-lunch-523f4/tokens  
+ Sat Nov 18 2017 15:31:23 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:23.944Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\dania\Desktop\Lunch'...
+[info] 
+[debug] [2017-11-18T20:31:23.948Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:31:23 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:24.206Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:31:24.206Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/286970043586/clients/_:getWebAppConfig  
+ Sat Nov 18 2017 15:31:24 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:24.428Z] <<< HTTP RESPONSE 200
+[warn] !  hosting: Port 5000 is not available. Trying another port...
+[debug] [2017-11-18T20:31:24.449Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/easy-lunch-523f4  
+ Sat Nov 18 2017 15:31:24 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:24.688Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-18T20:31:24.688Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/286970043586/clients/_:getWebAppConfig  
+ Sat Nov 18 2017 15:31:24 GMT-0500 (Eastern Standard Time)
+[debug] [2017-11-18T20:31:24.890Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5004
+
