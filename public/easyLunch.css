@@ -109,8 +109,7 @@ body {
 }
 
 .get-lunch {
-    background-color: blue;
-    margin-right: 30px;
+    background-color:#C0C0C0;
 }
 
 .get-lunch:hover {
@@ -139,8 +138,12 @@ body {
 }
 
 .group-photo {
-    width: 90%; 
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)
+    width: 300px;
+    height:auto;
+border-radius:8px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    position:fixed;
+margin-left:40px;
 }
 
 @media (max-width: 600px){
@@ -160,4 +163,8 @@ body {
     .homeContainer {
         height: auto;
     }
+}
+
+body {
+    font-weight:600;
 }

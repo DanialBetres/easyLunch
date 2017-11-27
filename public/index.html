@@ -10,6 +10,8 @@
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-auth.js"></script>
+  
   <script type="text/javascript" src="easyLunch.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -26,7 +28,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+<!-- <button onclick=authenticateWithFB()> sign in with FB</button> -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
@@ -36,7 +38,7 @@
         <a class="nav-link" href="/signUp.html">Sign Up For Lunch</a>
       </li>
       <li class="nav-item active">
-          <a class="nav-link" href="/seeList.html">Driver List</a>
+          <a class="nav-link" href="/seeList.html">Who Am I Going With?</a>
       </li>
       <li class="nav-item active">
           <a class="nav-link" href="/contact.html">Contact Us</a>
@@ -50,7 +52,7 @@
       <div class="col-sm-6" align="center">
           <p id="intro-text"> Welcome to <b>EasyLunch</b>, an app created to help make your Friday lunch a breeze</p>
           <button type="button" class="btn btn-lg aysha-button get-lunch" data-toggle="modal" data-target="#myModal"><a href="signUp.html">Sign Up For Lunch</a></button>
-          <button class="btn btn-lg aysha-button see-list" data-toggle="modal" data-target="#myOtherModal" onclick="">Who Am I Going With?</button>
+          <button class="btn btn-lg aysha-button see-list" data-toggle="modal" data-target="#myOtherModal"><a href="seeList.html">Who Am I Going With?</a></button>
       </div>
       <div class="col-sm-6">
         <img src="lunch.jpg" class="group-photo"/>
@@ -67,6 +69,8 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
+
+  
 </body>
 
 </html>
