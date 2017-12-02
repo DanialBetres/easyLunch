@@ -9,6 +9,16 @@
     messagingSenderId: "286970043586"
   };
   firebase.initializeApp(config);
+  var number = document.getElementById('carSpace');
+
+  // Listen for input event on numInput.
+//   number.onkeydown = function(e) {
+//       if(!((e.keyCode > 95 && e.keyCode < 106)
+//         || (e.keyCode > 47 && e.keyCode < 58) 
+//         || e.keyCode == 8)) {
+//           return false;
+//       }
+//   }
 
   var authenticateWithFB = function() {
 
@@ -45,6 +55,10 @@ var getFormInfo = function() {
     var driving = document.getElementById("isDriver").checked;
     var notdriving = document.getElementById("isntDriver").checked;
     var spots = document.getElementById("carSpace").value;
+    if(spots.indexOf("-") >= 0){
+        return false;
+    }else {
+    }
 
     console.log (firstname + lastname + driving + notdriving + spots);
 
