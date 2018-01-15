@@ -8,4 +8,4 @@ easyLunch will create a list of drivers and the respective passengers, ensuring 
 
 Front Page
 
-![alt text](screenshots/FrontPage.png "Description goes here")
+![alt text](https://github.com/DanialBetres/easyLunch/raw/master/screenshots/FrontPage.png "Logo Title Text 1")
