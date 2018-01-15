@@ -1,0 +1,24 @@
+<div id="root">
+    <div>{{IP_ADDRESS}} <div class="notLocalized">: 192.168.0.1</div> </div>
+    <span class="btn">{{HOST}}</span>
+    <div class="test">{{START}}</div>
+    <span class="notLocalized">gms</span>
+    <div>{{END}}</div>    
+</div>
+
+element(by.class('btn')).getText();
+element.all(by.tagName('span').get(0)).getText();
+
+
+XXXXXX : 192.168.0.1
+XXXXXX
+XXXXXX
+gms
+XXXXXX
+
+XXXXXX
+XXXXXX
+XXXXXX
+
+XXXXXX
+[: 192.168.0.1,gms]

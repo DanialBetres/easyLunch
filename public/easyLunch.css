@@ -144,6 +144,7 @@ border-radius:8px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     position:fixed;
 margin-left:40px;
+margin-top:-110px;
 }
 
 @media (max-width: 600px){
