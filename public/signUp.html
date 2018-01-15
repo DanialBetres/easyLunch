@@ -10,9 +10,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="easyLunch.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -49,39 +48,39 @@
     </nav>
 
     <div class="container" style="padding-top: 40px;">
-        <div class="col">
+        <form id="signupForm">
         <div class="row align-items-center">
             <div class="form-group">
                 <label for="Name">First Name</label>
-                <input class="form-control input-sm" id="firstname" type="text">
+                <input class="form-control input-sm" name="firstname" id="firstname" type="text" required>
             </div>
         </div>
         <div class="row align-items-center">
             <div class="form-group">
                 <label for="Name">Last Name</label>
-                <input class="form-control input-sm" id="lastname" type="text">
+                <input class="form-control input-sm" name="lastnmae" id="lastname" type="text" required>
             </div>
         </div>
-        <div class="row align-items-center">
+        <!-- <div class="row align-items-center">
             <div class="form-group">
                 <label for="inputsm">Are you a driver?</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" id="isDriver">Yes</label>
+                        <input type="radio" name="isDriver" id="isDriver">Yes</label required>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" id="isntDriver">No</label>
+                        <input type="radio" name="isntDriver" id="isntDriver">No</label required>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="row align-items-center">
             <div class="form-group">
                 <label for="carSpace">How many friends can you take? (Dont include yourself!) (If you're not a driver put 0)</label>
-                <input class="form-control" id="carSpace" type="number" min="0" step="1">
+                <input class="form-control" id="carSpace" name="carSpace" type="number" min="0" step="1" required>
             </div>
         </div>
-        <button type="button" class="btn btn-default aysha-button" data-dismiss="modal" onclick="getFormInfo()">Submit</button>
-    </div>
+        <button type="submit" class="btn btn-default aysha-button" data-dismiss="modal">Submit</button>
+        </form>
     </div>
 
 
